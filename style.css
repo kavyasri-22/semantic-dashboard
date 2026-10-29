@@ -1,0 +1,171 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #202938;
+  background: #f4f6fa;
+}
+
+a {
+  color: #164e9b;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #e09a00;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background: white;
+  padding: 10px;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+.site-header {
+  padding: 20px;
+  color: white;
+  background: #172554;
+}
+
+.site-header h1 {
+  margin-top: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.site-header a {
+  color: white;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  padding: 24px;
+}
+
+aside,
+main,
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+aside ul {
+  padding-left: 20px;
+}
+
+main section {
+  margin-bottom: 32px;
+}
+
+.card {
+  border: 1px solid #d5dbe5;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+caption {
+  text-align: left;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #d5dbe5;
+  text-align: left;
+}
+
+th {
+  background: #e9eef8;
+}
+
+.form-group {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 500px;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  background: #174ea6;
+}
+
+button:hover {
+  background: #123c80;
+}
+
+dialog {
+  width: min(90%, 450px);
+  border: 1px solid #aeb8c8;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 50%);
+}
+
+.site-footer {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+}

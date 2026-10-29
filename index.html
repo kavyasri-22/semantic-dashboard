@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessible student management dashboard">
+  <title>Student Management Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header">
+    <h1>Student Dashboard</h1>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Dashboard</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside aria-labelledby="sidebar-title">
+      <h2 id="sidebar-title">Quick Links</h2>
+      <nav aria-label="Sidebar navigation">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#student-records">Student Records</a></li>
+          <li><a href="#add-student">Add Student</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main id="main-content">
+      <section id="overview" aria-labelledby="overview-title">
+        <h2 id="overview-title">Overview</h2>
+        <p>Welcome to the student management dashboard.</p>
+
+        <article class="card">
+          <h3>Total Students</h3>
+          <p>120 registered students</p>
+        </article>
+      </section>
+
+      <section id="student-records"
+               aria-labelledby="records-title">
+        <h2 id="records-title">Student Records</h2>
+
+        <div class="table-wrapper">
+          <table>
+            <caption>Registered student information</caption>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>101</td>
+                <td>Rahul</td>
+                <td>Web Development</td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>102</td>
+                <td>Priya</td>
+                <td>Data Science</td>
+                <td>Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="add-student" aria-labelledby="form-title">
+        <h2 id="form-title">Add Student</h2>
+
+        <form id="student-form">
+          <div class="form-group">
+            <label for="student-name">Full Name</label>
+            <input id="student-name" name="studentName"
+                   type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="student-email">Email Address</label>
+            <input id="student-email" name="studentEmail"
+                   type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="student-course">Course</label>
+            <select id="student-course" name="course" required>
+              <option value="">Select a course</option>
+              <option value="web">Web Development</option>
+              <option value="data">Data Science</option>
+            </select>
+          </div>
+
+          <button type="submit">Add Student</button>
+          <p id="form-message" role="status"
+             aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section aria-labelledby="dialog-section-title">
+        <h2 id="dialog-section-title">Actions</h2>
+        <button id="open-dialog" type="button">
+          Open Information Dialog
+        </button>
+
+        <dialog id="info-dialog"
+                aria-labelledby="dialog-title">
+          <h2 id="dialog-title">Dashboard Information</h2>
+          <p>This is an accessible HTML dialog.</p>
+          <form method="dialog">
+            <button type="submit">Close</button>
+          </form>
+        </dialog>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Student Dashboard</p>
+  </footer>
+</body>
+</html>
